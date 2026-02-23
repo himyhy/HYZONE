@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HY ZONE | 灵动随笔</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <canvas id="ink-canvas" aria-hidden="true"></canvas>
+
+  <div class="wrap">
+    <div class="paper">
+      <div class="inner">
+        <header>
+          <a href="#" class="site-logo" id="logo">HY ZONE</a>
+
+          <nav class="top-actions" aria-label="顶部导航">
+            <button class="top-btn" id="btn-contact" type="button">联系我</button>
+            <button class="top-btn" id="btn-about" type="button">关于</button>
+          </nav>
+        </header>
+
+        <main>
+          <div class="avatar-wrap">
+            <div class="avatar-ink" aria-hidden="true"></div>
+            <img src="avatar.webp" alt="Avatar" class="avatar" id="avatar">
+            <div class="avatar-ring" aria-hidden="true"></div>
+          </div>
+
+          <h1 class="profile-name">HY ZONE</h1>
+          <p class="profile-bio">"请用绝对的理智和清醒的头脑<br>克制心中的爱与难过。"</p>
+
+          <!-- 入口卡片：由 app.js 根据 sites.js 自动渲染 -->
+          <div class="grid" id="service-grid"></div>
+
+          <div class="footer">
+            <div>© 2026 HY Personal Digital Garden</div>
+            <div>Powered by HY</div>
+            <div>Original Theme</div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- 联系我 / 关于 弹层 -->
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title">
+      <div class="panel-inner">
+        <div class="panel-head">
+          <div class="panel-title" id="panel-title">...</div>
+          <button class="panel-close" id="panel-close" type="button">关闭</button>
+        </div>
+        <div class="panel-body" id="panel-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
