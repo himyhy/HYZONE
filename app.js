@@ -157,7 +157,7 @@
           <div>邮箱：<a href="mailto:MYHYWO@GMAIL.COM">MYHYWO@GMAIL.COM</a></div>
           <div>Telegram：<a href="https://t.me/hy_post" onclick="return false">HY</a></div>
           <div>站点：<a href="https://BCD.MOE" target="_blank" rel="noopener">BCD.MOE</a></div>
-          <div style="margin-top:10px;color:rgba(29,29,29,.5);letter-spacing:.08em;">（信息可在 app.js 里替换）</div>
+          <div style="margin-top:10px;color:rgba(29,29,29,.5);letter-spacing:.08em;">无论如何，收到你的邮件一定让我非常开心。</div>
         </div>
       `,
     },
