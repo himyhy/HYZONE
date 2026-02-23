@@ -1,4 +1,4 @@
-:root{
+﻿:root{
   --paper: #f6f3ea;
   --paper-2: #f2efe6;
   --ink: #1d1d1d;
@@ -26,7 +26,7 @@ body{
   overflow-x:hidden;
 }
 
-/* 氛围层：宣纸纤维 + 水墨晕染（轻） */
+/* 姘涘洿灞傦細瀹ｇ焊绾ょ淮 + 姘村ⅷ鏅曟煋锛堣交锛?*/
 .bg{
   position:fixed;
   inset:0;
@@ -66,7 +66,7 @@ body{
   to{ transform: translate(calc(var(--bgx, 0px) * 1), calc(var(--bgy, 0px) * 1)) rotate(360deg) scale(1.06); }
 }
 
-/* 鼠标墨迹 Canvas */
+/* 榧犳爣澧ㄨ抗 Canvas */
 #ink-canvas{
   position:fixed;
   inset:0;
@@ -86,7 +86,7 @@ body{
   padding: min(9vh, 72px) 18px;
 }
 
-/* 中间卡片（无3D、不可拖动） */
+/* 涓棿鍗＄墖锛堟棤3D銆佷笉鍙嫋鍔級 */
 .paper{
   width:min(720px, 94vw);
   border-radius: var(--radius);
@@ -104,7 +104,7 @@ body{
   box-shadow: 0 34px 90px rgba(0,0,0,.12);
 }
 
-/* 纸边“毛边感” + 内描边 */
+/* 绾歌竟鈥滄瘺杈规劅鈥?+ 鍐呮弿杈?*/
 .paper::before{
   content:"";
   position:absolute;
@@ -178,7 +178,7 @@ header{
 }
 .site-logo:hover::after{ opacity:.55; }
 
-/* 右上角：联系我 / 关于 */
+/* 鍙充笂瑙掞細鑱旂郴鎴?/ 鍏充簬 */
 .top-actions{
   display:flex;
   align-items:center;
@@ -216,7 +216,7 @@ header{
 }
 .top-btn:hover::after{ opacity:.55; }
 
-/* 头像 */
+/* 澶村儚 */
 .avatar-wrap{
   position:relative;
   display:inline-grid;
@@ -269,10 +269,10 @@ header{
   max-width: 520px;
   line-height: 2.05;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 14px;`r`n  min-height: calc(2 * 2.05em);
 }
 
-/* 卡片入口 */
+/* 鍗＄墖鍏ュ彛 */
 .grid{
   margin-top: 12px;
   display:grid;
@@ -294,7 +294,7 @@ header{
   will-change: transform;
 }
 
-/* 卡片水墨光晕（跟随鼠标） */
+/* 鍗＄墖姘村ⅷ鍏夋檿锛堣窡闅忛紶鏍囷級 */
 .card::before{
   content:"";
   position:absolute;
@@ -309,7 +309,7 @@ header{
   pointer-events:none;
 }
 
-/* 纸纹高光 */
+/* 绾哥汗楂樺厜 */
 .card::after{
   content:"";
   position:absolute;
@@ -353,7 +353,7 @@ header{
   color: var(--muted-2);
 }
 
-/* 点击墨晕 ripple（通用） */
+/* 鐐瑰嚮澧ㄦ檿 ripple锛堥€氱敤锛?*/
 .ripple{
   position:absolute;
   border-radius: 50%;
@@ -368,7 +368,7 @@ header{
   to{ transform: translate(-50%, -50%) scale(1); opacity:0; }
 }
 
-/* 底部落款 */
+/* 搴曢儴钀芥 */
 .footer{
   margin-top: 22px;
   font-size: 12px;
@@ -377,7 +377,7 @@ header{
   line-height: 1.9;
 }
 
-/* 弹层：联系我 / 关于 */
+/* 寮瑰眰锛氳仈绯绘垜 / 鍏充簬 */
 .overlay{
   position:fixed;
   inset:0;
@@ -408,7 +408,7 @@ header{
   to{ transform: translateY(0); opacity:1; }
 }
 
-/* 墨晕开场 */
+/* 澧ㄦ檿寮€鍦?*/
 .panel::before{
   content:"";
   position:absolute;
