@@ -154,9 +154,9 @@
       title: "联系我",
       body: `
         <div>
-          <div>邮箱：<a href="mailto:your@email.com">your@email.com</a></div>
-          <div>Telegram：<a href="#" onclick="return false">@your_id</a></div>
-          <div>站点：<a href="https://031003.xyz" target="_blank" rel="noopener">031003.xyz</a></div>
+          <div>邮箱：<a href="mailto:MYHYWO@GMAIL.COM">MYHYWO@GMAIL.COM</a></div>
+          <div>Telegram：<a href="https://t.me/hy_post" onclick="return false">HY</a></div>
+          <div>站点：<a href="https://BCD.MOE" target="_blank" rel="noopener">BCD.MOE</a></div>
           <div style="margin-top:10px;color:rgba(29,29,29,.5);letter-spacing:.08em;">（信息可在 app.js 里替换）</div>
         </div>
       `,
@@ -166,7 +166,7 @@
       body: `
         <div>
           <div>这里是 HY 的水墨角落：随笔、笔记与一些小工具入口。</div>
-          <div>风格克制，动效轻微；希望每一次停留都像墨落宣纸。</div>
+          <div>希望每一次停留都像墨落宣纸。</div>
         </div>
       `,
     },
