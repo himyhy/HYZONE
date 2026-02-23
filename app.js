@@ -21,14 +21,22 @@
     const text = bio.dataset.text || "";
     if (!text) return;
     let i = 0;
-    const speed = 45;
+    const speed = 90;
+    const endPause = 1200;
+    const resetPause = 500;
     const tick = () => {
       const slice = text.slice(0, i);
       bio.innerHTML = escapeHTML(slice).replaceAll("\n", "<br>");
       i += 1;
       if (i <= text.length) {
         setTimeout(tick, speed);
+        return;
       }
+      setTimeout(() => {
+        i = 0;
+        bio.innerHTML = "";
+        setTimeout(tick, resetPause);
+      }, endPause);
     };
     tick();
   };
