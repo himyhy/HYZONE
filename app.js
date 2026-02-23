@@ -7,6 +7,31 @@
   const topBtns = Array.from(document.querySelectorAll(".top-btn"));
   const bg = document.querySelector(".bg");
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const bio = document.getElementById("profile-bio");
+
+  const renderBio = () => {
+    if (!bio) return;
+    const text = bio.dataset.text || "";
+    const safe = escapeHTML(text).replaceAll("\n", "<br>");
+    bio.innerHTML = safe;
+  };
+
+  const typeBio = () => {
+    if (!bio) return;
+    const text = bio.dataset.text || "";
+    if (!text) return;
+    let i = 0;
+    const speed = 45;
+    const tick = () => {
+      const slice = text.slice(0, i);
+      bio.innerHTML = escapeHTML(slice).replaceAll("\n", "<br>");
+      i += 1;
+      if (i <= text.length) {
+        setTimeout(tick, speed);
+      }
+    };
+    tick();
+  };
 
   // ====== 渲染入口卡片（来自 sites.js）======
   const renderSites = () => {
@@ -36,6 +61,11 @@
       .replaceAll("'", "&#39;");
   }
 
+  if (reduce) {
+    renderBio();
+  } else {
+    typeBio();
+  }
   renderSites();
   const cards = () => Array.from(document.querySelectorAll(".card"));
 
