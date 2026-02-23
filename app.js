@@ -26,7 +26,7 @@
     const text = bio.dataset.text || "";
     if (!text) return;
     let i = 0;
-    const speed = 90;
+    const speed = 150;
     const endPause = 1200;
     const resetPause = 500;
     const tick = () => {
