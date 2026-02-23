@@ -8,16 +8,21 @@
   const bg = document.querySelector(".bg");
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const bio = document.getElementById("profile-bio");
+  const bioText = document.getElementById("bio-text");
+
+  const setBioText = (value) => {
+    if (!bioText) return;
+    bioText.textContent = value;
+  };
 
   const renderBio = () => {
     if (!bio) return;
     const text = bio.dataset.text || "";
-    const safe = escapeHTML(text).replaceAll("\n", "<br>");
-    bio.innerHTML = safe;
+    setBioText(text);
   };
 
   const typeBio = () => {
-    if (!bio) return;
+    if (!bio || !bioText) return;
     const text = bio.dataset.text || "";
     if (!text) return;
     let i = 0;
@@ -26,7 +31,7 @@
     const resetPause = 500;
     const tick = () => {
       const slice = text.slice(0, i);
-      bio.innerHTML = escapeHTML(slice).replaceAll("\n", "<br>");
+      setBioText(slice);
       i += 1;
       if (i <= text.length) {
         setTimeout(tick, speed);
@@ -34,7 +39,7 @@
       }
       setTimeout(() => {
         i = 0;
-        bio.innerHTML = "";
+        setBioText("");
         setTimeout(tick, resetPause);
       }, endPause);
     };
@@ -67,6 +72,12 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#39;");
+  }
+
+  if (bio) {
+    const text = bio.dataset.text || "";
+    const placeholder = bio.querySelector(".bio-placeholder");
+    if (placeholder) placeholder.textContent = text;
   }
 
   if (reduce) {

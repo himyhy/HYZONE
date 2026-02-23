@@ -269,7 +269,16 @@ header{
   max-width: 520px;
   line-height: 2.05;
   color: var(--muted);
-  font-size: 14px;`r`n  min-height: calc(2 * 2.05em);
+  font-size: 14px;
+  display: grid;
+}
+.bio-placeholder,
+.bio-text{
+  grid-area: 1 / 1;
+  white-space: pre-line;
+}
+.bio-placeholder{
+  visibility: hidden;
 }
 
 /* 鍗＄墖鍏ュ彛 */
